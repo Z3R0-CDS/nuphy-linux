@@ -1,0 +1,8 @@
+# Nuphy Air96
+# This file should be installed to /etc/udev/rules.d so that you can access the NuPhy Air 96 without being root.
+#
+# type this at the command prompt: sudo cp nuphy-air96.rules /etc/udev/rules.d
+
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="19f5", ATTR{idProduct}=="3265", MODE="0666"
+
+KERNEL=="hidraw*", ATTRS{idVendor}=="19f5", ATTRS{idProduct}=="3265", MODE="0666"

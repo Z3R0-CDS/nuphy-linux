@@ -3,21 +3,35 @@
  
 # Nuphy udev rules
 
-Welcome to the GitHub repository for the Nuphy Air96 udev rules! This repository contains the essential udev rules needed to ensure compatibility and proper permissions for the nuphy air 96. These rules are particularly designed to work seamlessly with the VIA web application at [usevia.app](https://usevia.app/).
+Welcome to the GitHub repository for the Nuphy udev rules! This repository contains the essential udev rules needed to ensure compatibility and proper permissions for nuphy hardware. These rules are particularly designed to work seamlessly with the VIA web application at [usevia.app](https://usevia.app/).
 
 ## Overview
 
-Udev is a device manager for the Linux kernel, which dynamically creates or removes device nodes in the `/dev` directory. For the nuphy air 96, specific udev rules are required to set the correct permissions, allowing applications like [usevia.app](https://usevia.app/) to interact with them without needing root privileges.
+Udev is a device manager for the Linux kernel, which dynamically creates or removes device nodes in the `/dev` directory. For the nuphy keyboards, specific udev rules are required to set the correct permissions, allowing applications like [usevia.app](https://usevia.app/) to interact with them without needing root privileges.
 
-This repository provides the necessary udev rules to facilitate this interaction, ensuring a smooth and secure experience for users of Nupy Air96 on Linux systems.
-I do not support other nuphys because I don't own one and don't know the id's feel free to open merge requests if you own them.
+This repository provides the necessary udev rules to facilitate this interaction, ensuring a smooth and secure experience for users of Nupy Keyboards on Linux systems.
+
+I cannot gurantee or verify if all devices will work because I do not own all of them (Why should I?!). But using the json files from the offficial site I do have the IDs they used. So should work right?
+In the worst case open an issue and let me know.
+
+## Supported devices
+Tested:
+-  Nuphy Air96 v2
+
+Untested (Should work I dont have one tho):
+-  Nuphy Air75 v2
+-  Nuphy Air60 v2
+-  NuPhy Gem80
+-  NuPhy Halo75
+-  NuPhy Halo96
+-  NuPhy Nos75
 
 ## Installation
 
 ### Prerequisites
 
 - A Linux-based operating system.
-- A Nuphy air96.
+- A supported Nuphy device.
 
 ### Steps
 
@@ -33,7 +47,7 @@ I do not support other nuphys because I don't own one and don't know the id's fe
 
 3. **Copy the Udev Rule:**
    ```bash
-   sudo cp nuphy-air96.rules /etc/udev/rules.d/
+   sudo cp nuphy.rules /etc/udev/rules.d/
    ```
 
 4. **Reload Udev Rules:**
@@ -44,10 +58,12 @@ I do not support other nuphys because I don't own one and don't know the id's fe
 5. **Verify Installation:**
    Connect your Nuphy device and verify if it's detected correctly by the [via](https://usevia.app/) application.
    Make sure to follow the guide of the [Official website](https://nuphy.com/pages/via-usage-guide-for-nuphy-keyboards) to ensure its working as intended.
+   Also keep in mind it might be required to reopen the browser or try in a private tab if you attempted to use via before.
+   I had some cached issues with the permissions at first and testing in a private tab helped.
 
 ## Usage
 
-Once installed, the udev rules will automatically set the correct permissions for your Nuphy Air96.
+Once installed, the udev rules will automatically set the correct permissions for your Nuphy Device.
 This allows the [via](https://usevia.app/) web application to detect and interact with your device without requiring additional configurations.
 
 ---

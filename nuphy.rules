@@ -1,0 +1,29 @@
+# Nuphy Devices
+# This file should be installed to /etc/udev/rules.d so that you can access Nuphy Devices with via without being root.
+#
+# type this at the command prompt: sudo cp nuphy.rules /etc/udev/rules.d
+
+
+# Nuphy Air96 v2 -> 3265   
+# Nuphy Air75 v2 -> 3245
+# Nuphy Air60 v2 -> 3255
+# NuPhy Gem80    -> 3275
+# NuPhy Halo75   -> 32F5
+# NuPhy Halo96   -> 3302
+# NuPhy Nos75    -> 3235
+
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="19f5", ATTR{idProduct}=="3265", MODE="0666"
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="19f5", ATTR{idProduct}=="3245", MODE="0666"
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="19f5", ATTR{idProduct}=="3255", MODE="0666"
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="19f5", ATTR{idProduct}=="3275", MODE="0666"
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="19f5", ATTR{idProduct}=="32F5", MODE="0666"
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="19f5", ATTR{idProduct}=="3302", MODE="0666"
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="19f5", ATTR{idProduct}=="3235", MODE="0666"
+
+KERNEL=="hidraw*", ATTRS{idVendor}=="19f5", ATTRS{idProduct}=="3265", MODE="0666"
+KERNEL=="hidraw*", ATTRS{idVendor}=="19f5", ATTRS{idProduct}=="3245", MODE="0666"
+KERNEL=="hidraw*", ATTRS{idVendor}=="19f5", ATTRS{idProduct}=="3255", MODE="0666"
+KERNEL=="hidraw*", ATTRS{idVendor}=="19f5", ATTRS{idProduct}=="3275", MODE="0666"
+KERNEL=="hidraw*", ATTRS{idVendor}=="19f5", ATTRS{idProduct}=="32F5", MODE="0666"
+KERNEL=="hidraw*", ATTRS{idVendor}=="19f5", ATTRS{idProduct}=="3302", MODE="0666"
+KERNEL=="hidraw*", ATTRS{idVendor}=="19f5", ATTRS{idProduct}=="3235", MODE="0666"

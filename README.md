@@ -39,6 +39,7 @@ Tested/Added by contributors:
 - NuPhy Air75 v3 ISO (lyynsch)
 - NuPhy Node100 LP (digit4lsh4d0w)
 - NuPhy Node100 LP ISO (przmkg)
+- NuPhy Node100 HP (janpeterka)
 
 Dongles:
 

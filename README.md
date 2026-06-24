@@ -38,6 +38,9 @@ Tested/Added by contributors:
 - NuPhy Node75 LP (FazleArefin)
 - NuPhy Air75 v3 ISO (lyynsch)
 - NuPhy Node100 LP (digit4lsh4d0w)
+- NuPhy Node100 LP ISO (przmkg)
+- NuPhy Node100 HP (janpeterka)
+- NuPhy Air65 V3 (notonetotalk)
 
 Dongles:
 
@@ -45,6 +48,7 @@ Tested/Added by contributors:
 - Nuphy Kick 75 Upgrader neversun
 - NuPhy Air75 v3 Upgrader (a-szulc)
 - NuPhy Node100 LP Dongle (digit4lsh4d0w)
+- NuPhy Air65 V3 Upgrader (notonetotalk)
 
 ## Installation
 

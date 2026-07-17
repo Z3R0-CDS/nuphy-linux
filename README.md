@@ -41,6 +41,7 @@ Tested/Added by contributors:
 - NuPhy Node100 LP ISO (przmkg)
 - NuPhy Node100 HP (janpeterka)
 - NuPhy Air65 V3 (notonetotalk)
+- NuPhy Halo75 V2 (Nicktriez)
 
 Dongles:
 

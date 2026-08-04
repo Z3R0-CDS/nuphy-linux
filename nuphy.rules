@@ -10,32 +10,33 @@
 # type this at the command prompt: sudo cp nuphy.rules /etc/udev/rules.d
 
 
-# Nuphy Air96 v2            -> 3265
-# Nuphy Air75 v2            -> 3245
-# Nuphy Air60 v2            -> 3255
-# Nuphy Air60 HE            -> fee0
-# NuPhy Gem80               -> 3275
-# NuPhy Halo75              -> 32F5
-# NuPhy Halo96              -> 3302
-# NuPhy Nos75               -> 3235
-# NuPhy Kick75              -> 1026
-# NuPhy Kick75 Upgrader     -> 0720
-# NuPhy Dongle              -> 2620
-# Nuphy Halo65 HE           -> 6112
-# NuPhy Air75 v3            -> 1028
-# NuPhy Air75 v3 Upgrader   -> 0722
-# Nuphy Air75 HE            -> 6120
-# NuPhy Air75 v3 ISO        -> 102a
-# NuPhy Field75 HE          -> fe70
-# NuPhyX BH65               -> 6130
-# Nuphy Node75 LP           -> 1030
-# Nuphy Node75 LP Upgrader  -> 0730
-# Nuphy Node100 LP          -> 1037
-# Nuphy Node100 LP Upgrader -> 0737
-# NuPhy Node100 LP ISO      -> 103b
-# Nuphy Node100 HP          -> 1036
-# NuPhy Air65 V3            -> 102b
-# NuPhy Air65 V3 Upgrader   -> 072b
+# Nuphy Air96 v2                     -> 3265
+# Nuphy Air75 v2                     -> 3245
+# Nuphy Air60 v2                     -> 3255
+# Nuphy Air60 HE                     -> fee0
+# NuPhy Gem80                        -> 3275
+# NuPhy Halo75                       -> 32F5
+# NuPhy Halo96                       -> 3302
+# NuPhy Nos75                        -> 3235
+# NuPhy Kick75                       -> 1026
+# NuPhy Kick75 Upgrader              -> 0720
+# NuPhy Dongle                       -> 2620
+# Nuphy Halo65 HE                    -> 6112
+# NuPhy Air75 v3                     -> 1028
+# NuPhy Air75 v3 Upgrader            -> 0722
+# Nuphy Air75 HE                     -> 6120
+# NuPhy Air75 v3 ISO                 -> 102a
+# NuPhy Field75 HE                   -> fe70
+# NuPhyX BH65                        -> 6130
+# Nuphy Node75 LP                    -> 1030
+# Nuphy Node75 LP Upgrader           -> 0730
+# Nuphy Node100 LP                   -> 1037
+# Nuphy Node100 LP Upgrader          -> 0737
+# NuPhy Node100 LP ISO               -> 103b
+# NuPhy Node100 LP ISO Upgrader      -> 073b
+# Nuphy Node100 HP                   -> 1036
+# NuPhy Air65 V3                     -> 102b
+# NuPhy Air65 V3 Upgrader            -> 072b
 
 SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="19f5", ATTR{idProduct}=="3265", MODE="0666"
 SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="19f5", ATTR{idProduct}=="3245", MODE="0666"
@@ -60,6 +61,7 @@ SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="19f5", ATTR{idPro
 SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="19f5", ATTR{idProduct}=="1037", MODE="0666"
 SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="19f5", ATTR{idProduct}=="0737", MODE="0666"
 SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="19f5", ATTR{idProduct}=="103b", MODE="0666"
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="19f5", ATTR{idProduct}=="073b", MODE="0666"
 SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="19f5", ATTR{idProduct}=="1036", MODE="0666"
 SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="19f5", ATTR{idProduct}=="102b", MODE="0666"
 SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="19f5", ATTR{idProduct}=="072b", MODE="0666"
@@ -87,6 +89,7 @@ KERNEL=="hidraw*", ATTRS{idVendor}=="19f5", ATTRS{idProduct}=="0730", MODE="0666
 KERNEL=="hidraw*", ATTRS{idVendor}=="19f5", ATTRS{idProduct}=="1037", MODE="0666"
 KERNEL=="hidraw*", ATTRS{idVendor}=="19f5", ATTRS{idProduct}=="0737", MODE="0666"
 KERNEL=="hidraw*", ATTRS{idVendor}=="19f5", ATTRS{idProduct}=="103b", MODE="0666"
+KERNEL=="hidraw*", ATTRS{idVendor}=="19f5", ATTRS{idProduct}=="073b", MODE="0666"
 KERNEL=="hidraw*", ATTRS{idVendor}=="19f5", ATTRS{idProduct}=="1036", MODE="0666"
 KERNEL=="hidraw*", ATTRS{idVendor}=="19f5", ATTRS{idProduct}=="102b", MODE="0666"
 KERNEL=="hidraw*", ATTRS{idVendor}=="19f5", ATTRS{idProduct}=="072b", MODE="0666"

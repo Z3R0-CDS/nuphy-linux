@@ -11,22 +11,26 @@ Udev is a device manager for the Linux kernel, which dynamically creates or remo
 
 This repository provides the necessary udev rules to facilitate this interaction, ensuring a smooth and secure experience for users of Nupy Keyboards on Linux systems.
 
-I cannot gurantee or verify if all devices will work because I do not own all of them (Why should I?!). But using the json files from the offficial site I do have the IDs they used. So should work right?
-In the worst case open an issue and let me know.
+I cannot gurantee or verify if all devices will work because I do not own all of them (Why should I?!). But using the json files from the offficial site, I do have some of the IDs they used. So should work right?
+
+**Add any device missing and become a beloved contributer <3**
 
 ## Supported devices
-Tested by developer:
+Keyboards tested by developer:
 -  Nuphy Air96 v2
 -  Nuphy Air60 v2
 
-Untested (Should work I dont have one tho):
+Keyboards untested (Imported from Nuphys Website):
 -  Nuphy Air75 v2
 -  NuPhy Gem80
 -  NuPhy Halo75
 -  NuPhy Halo96
 -  NuPhy Nos75
 
-Tested/Added by contributors:
+
+> **_NOTE:_**  contributions will only be verified by logic! There may be false entries created by 3rd parties. I do my best ;)
+
+Keyboards tested/added by contributors (Thank you <3):
 - NuPhy Field75 HE V2 (vleeuwenmenno)
 - Nuphy Air60 HE (Phrozenn1)
 - Nuphy Kick75 (mfiumara)
@@ -44,9 +48,7 @@ Tested/Added by contributors:
 - NuPhy Air65 V3 (notonetotalk)
 - NuPhy Halo75 V2 (Nicktriez)
 
-Dongles:
-
-Tested/Added by contributors:
+Dongles tested/added by contributors (Thank you <3):
 - Nuphy Kick 75 Upgrader neversun
 - NuPhy Air75 v3 Upgrader (a-szulc)
 - NuPhy Node100 LP Dongle (digit4lsh4d0w)
@@ -59,7 +61,8 @@ Tested/Added by contributors:
 - A Linux-based operating system.
 - A supported Nuphy device.
 
-### Steps
+### Steps for installation
+
 
 1. **Clone the Repository:**
    ```bash
@@ -74,6 +77,9 @@ Tested/Added by contributors:
 3. **Install the Udev Rule:**
 
    Automated
+   ```bash
+   chmod +x install_rules.sh
+   ```
    ```bash
    ./install_rules.sh
    ```
@@ -97,34 +103,23 @@ Tested/Added by contributors:
 Once installed, the udev rules will automatically set the correct permissions for your Nuphy Device.
 This allows the [via](https://usevia.app/) or [nuphy.io](https://www.drive.nuphy.io/) web application to detect and interact with your device without requiring additional configurations.
 
+
+## Contributing
+
+Want to add support for a new Nuphy device? See [CONTRIBUTING.md](CONTRIBUTING.md) for a full step-by-step guide — or follow the quick instructions below:
+
+1. Run `lsusb | grep nuphy` to find your device ID
+2. Copy and paste the template from the top of `nuphy.rules`
+3. Replace `<vendorID>` and `<deviceID>` with your values
+4. Create a file like `nuphy-air96-v2.rules` and open a PR
+
+```bash
+# Install locally without cloning the repo
+curl -L -O https://raw.githubusercontent.com/Z3R0-CDS/nuphy-linux/main/nuphy.rules
+sudo cp nuphy.rules /etc/udev/rules.d/
+sudo udevadm control --reload-rules && sudo udevadm trigger
+```
+
 ---
 
-For more information or support, open an issue in this repository. I will try to respond asap
-
-## Create a rule yourself.
-
-### Commands
-
-1. **Get a list of usb devices.**
-   ```bash
-   lsusb
-   ```
-2. **Get data of your device.**
-   ```
-   Bus 005 Device 007: ID 19f5:3265 NuPhy NuPhy Air96 V2 <- Example output for my nuphy
-                              ^ 
-                            These are the vendor ID and device ID
-   Vendor will be 19f5 because nuphy is nuphy.
-   ```
-3. **Create a rule.**
-   ```
-    <notepad app(kate)> nuphy-<something>.rules
-    Enter the rules:
-    SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="<vendorID>", ATTR{idProduct}=="<deviceID>", MODE="0666"
-    
-    KERNEL=="hidraw*", ATTRS{idVendor}=="<vendorID>", ATTRS{idProduct}=="<deviceID>", MODE="0666"
-   ```
-4. **Create a rule.**
-   Then just copy and apply as above.
-   Also sharing is caring so open a merge request.
-
+For more information or support, open an issue in this repository. I will try to respond asap.

@@ -27,6 +27,7 @@ Untested (Should work I dont have one tho):
 -  NuPhy Nos75
 
 Tested/Added by contributors:
+- NuPhy Field75 HE V2 (vleeuwenmenno)
 - Nuphy Air60 HE (Phrozenn1)
 - Nuphy Kick75 (mfiumara)
 - NuPhy Halo65 HE (IcarusSosie)

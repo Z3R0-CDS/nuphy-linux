@@ -53,6 +53,7 @@ Dongles tested/added by contributors (Thank you <3):
 - NuPhy Air75 v3 Upgrader (a-szulc)
 - NuPhy Air75 v3 ISO Upgrader (Fluiding)
 - NuPhy Node100 LP Dongle (digit4lsh4d0w)
+- NuPhy Node100 LP ISO Upgrader (przmkg)
 - NuPhy Air65 V3 Upgrader (notonetotalk)
 
 ## Installation

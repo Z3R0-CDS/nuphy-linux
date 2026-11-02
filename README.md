@@ -51,6 +51,7 @@ Keyboards tested/added by contributors (Thank you <3):
 Dongles tested/added by contributors (Thank you <3):
 - Nuphy Kick 75 Upgrader neversun
 - NuPhy Air75 v3 Upgrader (a-szulc)
+- NuPhy Air75 v3 ISO Upgrader (Fluiding)
 - NuPhy Node100 LP Dongle (digit4lsh4d0w)
 - NuPhy Air65 V3 Upgrader (notonetotalk)
 
